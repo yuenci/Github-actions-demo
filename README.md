@@ -1,9 +1,8 @@
 # Github-actions-demo
 
-
 ## Create action file
-Create actionName.yml file under path .github/workflows/
 
+Create actionName.yml file under path .github/workflows/
 
 ```yml
 name: scp files
@@ -26,7 +25,9 @@ jobs:
 ```
 
 ### on
+
 Event trigger
+
 ```yml
 // single event
 on: push
@@ -35,18 +36,30 @@ on: push
 on: [push,pull_request]
 ```
 
+### run-on
+operating system Image for building.
+
+Availabletypes are
+* ubuntu-latest, ubuntu-18.04, or ubuntu-16.04
+* windows-latest or windows-2019
+* macos-latest or macos-10.15
 
 ### job
+
 Integration of multiple actions
 
 ### steps
+
 Each job consists of multiple step, which are executed from top to bottom.
 
 ### uses
+
 Use the action directly in the market.
 
 ### Run
+
 Start a shell to execute the command.
+
 ```yml
 // single command
 - name: Install Dependencies
@@ -60,9 +73,11 @@ Start a shell to execute the command.
 ```
 
 ## Add Secret environment variables
+
 ![](20221207003005.png)
 
 Use in yaml file：
+
 ```yml
 password: ${{ secrets.PASSWORD }}
 ```
