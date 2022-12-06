@@ -23,6 +23,7 @@ jobs:
         source: "./"
         target: "/home/ubuntu"
 ```
+[appleboy/scp-action](https://github.com/marketplace/actions/scp-files)
 
 ### on
 
@@ -35,6 +36,7 @@ on: push
 // Multiple events
 on: [push,pull_request]
 ```
+
 
 ### run-on
 operating system Image for building.
